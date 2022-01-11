@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <title>Scopa</title> 
+        <script src="/socket.io/socket.io.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 		crossorigin="anonymous">
+	<link href="css/stylesheet.css" rel="stylesheet">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<base href="/">
+
+    </head>
+
+    <body>
+      <!-- modal demande de pseudo-->
+      <div class="modal hide fade" data-backdrop="static" data-keyboard="false" id="modal-pseudo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"> Bienvenue !</h5>
+            </div>
+            <div class="modal-body">
+              <form id="form-pseudo">
+                <div class="form-group">
+                  <label class="col-form-label">Votre pseudo :</label>
+                  <input type="text" class="form-control" id="pseudo-input">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id = "valide-pseudo" class="btn btn-primary"> Valider </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal demande affiche premiere carte-->
+      <div class="modal hide fade" id="modal-carte"data-backdrop="static" data-keyboard="false"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"> Carte proposée </h5>
+            </div>
+            <div class="modal-body" id="div-carte-proposee" class="text-center">
+            </div>
+            <div class="modal-footer">
+              <button type="button" id = "prend-carte-proposee" class="btn btn-primary">Prendre</button>
+              <button type="button" class="btn btn-secondary" id="refuse-carte-proposee">Refuser</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- gros container-->
+      <div class="container-fluid">
+        <!-- ligne principale-->
+        <div class="row">
+          <!-- Cote joueur 1-->
+          <div class="text-center text-wrap text-break col-2 mt-5">
+            <h1 class="nomjoueur"> En attente...</h1>
+            <h2 id="score1"> Score : 0 </h2> <br><br><br>
+            <h2>Dernier pli</h2>
+            <div class= "dernier-pli-j1">
+            </div>
+           
+          </div>
+          <div class ="col-sm">
+            <!-- La table-->
+            <div class="row">
+              <!--
+              Div des cartes posées (colonne)
+              -->
+              <div class = "border border-black col-sm mt-2 mb-5 bg-secondary rounded-lg">
+                <!--premiere ligne-->
+                <div class="row pr-3 pl-3 pb-3 pt-3">
+
+                  <div class="col-sm">
+                    <img class = "carte-responsive faux-table " src="ressources/images/cartes/_fake.png">
+                  </div>
+                  <div class="col-sm">
+                    <img class = "faux-table carte-responsive" src="ressources/images/cartes/_fake.png">
+                  </div>
+                  <div class="col-sm">
+                    <img class = "faux-table carte-responsive" src="ressources/images/cartes/_fake.png">
+                  </div>
+                  <div class="col-sm">
+                    <img  class = "faux-table carte-responsive" src="ressources/images/cartes/_fake.png">
+                  </div>
+                  <div class="col-sm">
+                    <img class = "faux-table carte-responsive" src="ressources/images/cartes/_fake.png">
+                  </div>
+                </div>
+
+                <!--Deuxieme ligne-->
+                <div class="row pr-3 pl-3 pb-3 pt-3">
+                  <div class="col-sm">
+                    <img  class = "carte-responsive faux-table" src="ressources/images/cartes/_fake.png">
+                  </div>
+                  <div class="col-sm">
+                    <img class = "carte-responsive faux-table" src="ressources/images/cartes/_fake.png">
+                  </div>
+                  <div class="col-sm">
+                    <img class = "carte-responsive faux-table" src="ressources/images/cartes/_fake.png">
+                  </div>
+                  <div class="col-sm">
+                    <img class = "carte-responsive faux-table" src="ressources/images/cartes/_fake.png">
+                  </div>
+                  <div class="col-sm">
+                    <img  class = " carte-responsive faux-table" src="ressources/images/cartes/_fake.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- La main-->
+            <div class="row">
+               <!--
+               Div des cartes en main
+               -->
+              <div class=" main col-sm mb-2 rounded-lg shadow-lg">
+                <div class="row pr-3 pl-3 pb-3 pt-3">
+                  <!--
+                    Pour enlever, suppresion de la colonne
+                    Pour ajouter, ajout de la colonne
+                  -->
+                  <div class="col-sm main">
+                    <img  class = "carte-responsive faux-main" src="ressources/images/cartes/_fake.png">
+                  </div>
+                  <div class="col-sm main">
+                    <img  class = "carte-responsive faux-main" src="ressources/images/cartes/_fake.png">
+                  </div>
+                  <div class="col-sm main">
+                    <img  class = "carte-responsive faux-main" src="ressources/images/cartes/_fake.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- les boutons-->
+            <div class="row">
+              <div class = "col-sm text-center" id = "interaction">
+                
+              </div>
+            </div>
+          </div>
+          
+
+         
+
+          <div class="text-center text-wrap text-break col-2 mt-5">
+            <h1 class="nomjoueur"> En attente...</h1>
+            <h2 id="score2"> Score : 0 </h2> <br><br><br>
+            <h2>Dernier pli</h2>
+            <div class= "dernier-pli-j2">
+            </div>
+           
+          </div>
+        </div>
+      </div>
+        
+
+        <script src="js/Client.js"></script>
+
+    </body>
+</html>

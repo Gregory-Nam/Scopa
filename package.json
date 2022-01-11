@@ -1,0 +1,12 @@
+{
+    "name": "scopa",
+    "version": "1.0.0",
+    "description": "",
+    "dependencies": {
+        "express": "^4.17.1",
+        "jquery": "^3.5.0",
+        "jsdom": "^16.2.1",
+        "nodemon": "^2.0.2",
+        "socket.io": "^2.3.0"
+    }
+}

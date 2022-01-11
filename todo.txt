@@ -1,0 +1,3 @@
+A fixer :
+    quand y a rien dans dernier plis et qu'on fait une interaction impossible
+    ça ajoute quand meme dans dernier pli
