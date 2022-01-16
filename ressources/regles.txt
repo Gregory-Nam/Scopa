@@ -3,17 +3,17 @@ Valeur :  1, 2, 3, 4, 5, 6, 7,     9,    8, 10
 
 
 (1) Melanger les cartes
-(2) On montre la première carte à une personne
-(3) a. il l'a prend : on lui distribue X cartes et X cartes à l'autre (chacun son tour) puis on pose 4 cartes
-    b. il ne l'a prend pas : on pose 4 cartes et on distribue X cartes à l'un et à l'autre chacun son tour
+(2) On montre la premiÃ¨re carte Ã  une personne
+(3) a. il l'a prend : on lui distribue 3 cartes et 3 cartes Ã  l'autre (chacun son tour) puis on pose 4 cartes
+    b. il ne l'a prend pas : on pose 4 cartes et on distribue X cartes Ã  l'un et Ã  l'autre chacun son tour
 
 (4) On joue jusqu'a ce que les deux joueurs n'aient plus de cartes
 
-(5) La dernière personne qui a pris une carte prend les cartes réstante
+(5) La derniÃ¨re personne qui a pris une carte prend les cartes rÃ©stante
 
-(6) On distribue X carte à l'un et X carte à l'autre chacun son tour -> (4)
+(6) On distribue 3 carte Ã  l'un et 3 carte Ã  l'autre chacun son tour -> (4)
 
-(7) Plus de carte -> décompte des points
+(7) Plus de carte -> dÃ©compte des points
 
 
 Les points sont : 
@@ -23,20 +23,20 @@ Les points sont :
 	- scopa
 
 
-Déroulement du jeu :
-	Quatres cartes sont posées et des cartes ont été distribuées
+DÃ©roulement du jeu :
+	Quatres cartes sont posÃ©es et des cartes ont Ã©tÃ© distribuÃ©es
 
 	On peut prendre : 
-		- une carte si on a la même (peut importe la couleur) 
+		- une carte si on a la mÃªme (peut importe la couleur) 
 		  exemple : 2 en main, 2 sur la table, je prend.
 		
-		- plusieurs cartes si la somme de celles-ci est égal à ma carte si la carte que j'ai en main
+		- plusieurs cartes si la somme de celles-ci est Ã©gal Ã  ma carte si la carte que j'ai en main
 		  n'est pas sur la table
 		  exemple : valet en main, 5 et 4 sur la table, je prend
 			    SAUF si un valet est sur la table !
 
-	Si on prend la dernière carte posé sur la table : scopa.
-	On peut poser une carte quand on veut pour de la stratégie mais on est obliger d'en poser une quand :
+	Si on prend la derniÃ¨re carte posÃ© sur la table : scopa.
+	On peut poser une carte quand on veut pour de la stratÃ©gie mais on est obliger d'en poser une quand :
 		- il n'y a plus de carte sur la table
 		- on ne peut rien prendre.
 	
