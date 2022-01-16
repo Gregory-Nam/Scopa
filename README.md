@@ -1,9 +1,10 @@
 # Scopa
-Jeu de carte italien version corse réalisé pendant le confinement 2020
+*jeu de carte italien version corse réalisé pendant le confinement 2020*
 
-- découverte de nodeJS et socket.io
+découverte de nodeJS et socket.io
 
-[Cliquez ici](http://scopa.alwaysdata.net/) pour essayer (astuce : dupliquez l'onglet pour jouer contre vous même ;) )
+[Cliquez ici](http://scopa.alwaysdata.net/) pour essayer le jeu 
+(astuce : dupliquez l'onglet pour jouer contre vous même ;) )
 
 Explication simplifié des règles : 
 * on possède 3 cartes en main et on a deux possibilités :
@@ -11,4 +12,4 @@ Explication simplifié des règles :
   * On ne peut pas prendre alors on pose une carte
 * Dame vaut 8, Valet vaut 9 et Roi vaut 10
 
-Règles détaillés [ici](https://github.com/Gregory-Nam/Scopa/blob/main/ressources/regles.txt)
+Règles détaillées [ici](https://github.com/Gregory-Nam/Scopa/blob/main/ressources/regles.txt)
